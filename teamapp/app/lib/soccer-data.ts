@@ -1,3 +1,111 @@
+const Players = [
+    {
+        PlayerId: 1,
+        Name: 'Michael Ramsey',
+        Position: 'Forward'
+    },
+    {
+        PlayerId: 2,
+        Name: 'Will Fatzinger',
+        Position: 'Defense'
+    },
+    {
+        PlayerId: 3,
+        Name: 'Slate Danforth',
+        Position: 'Midfield'
+    },
+    {
+        PlayerId: 4,
+        Name: 'Harrison Kraus',
+        Position: 'Forward'
+    },
+    {
+        PlayerId: 5,
+        Name: 'Luca Gustafson',
+        Position: 'Goalkeeper'
+    },
+    {
+        PlayerId: 6,
+        Name: 'Kyle Butcher',
+        Position: 'Forward'
+    },
+    {
+        PlayerId: 7,
+        Name: 'Alex Lopacinski',
+        Position: 'Defender'
+    },
+    {
+        PlayerId: 8,
+        Name: 'Jake Berecz',
+        Position: 'Forward'
+    },
+    {
+        PlayerId: 9,
+        Name: 'Ryan Pidgeon',
+        Position: 'Midfield'
+    },
+    {
+        PlayerId: 10,
+        Name: 'Pacific Ibanzi',
+        Position: 'Midfield'
+    },
+    {
+        PlayerId: 11,
+        Name: 'Quinn Kunath',
+        Position: 'Defender'
+    },
+    {
+        PlayerId: 12,
+        Name: 'Carter Laatsch',
+        Position: 'Midfield'
+    },
+    {
+        PlayerId: 13,
+        Name: 'Carlos Lomena',
+        Position: 'Forward'
+    },
+    {
+        PlayerId: 14,
+        Name: 'Girom Affolter',
+        Position: 'Forward'
+    },
+    {
+        PlayerId: 15,
+        Name: 'Brian Manon',
+        Position: 'Defense'
+    },
+    {
+        PlayerId: 16,
+        Name: 'Till Schumacher',
+        Position: 'Midfield'
+    },
+    {
+        PlayerId: 17,
+        Name: 'Hugo Berg',
+        Position: 'Midfield'
+    },
+    {
+        PlayerId: 18,
+        Name: 'Michael Pickens',
+        Position: 'Forward'
+    },
+    {
+        PlayerId: 19,
+        Name: 'Peyton Mancini',
+        Position: 'Defender'
+    },
+    {
+        PlayerId: 20,
+        Name: 'Lucas Pace',
+        Position: 'Defense'
+    },
+    {
+        PlayerId: 21,
+        Name: 'Ludvig Werner',
+        Position: 'Defense'
+    }
+]
+
 const Events = [
     // Game VS Catholic
     {
@@ -412,7 +520,7 @@ const Events = [
         Time: 10,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 9
     },
     {
         EventId: 51,
@@ -420,7 +528,7 @@ const Events = [
         Time: 10,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 8
     },
     {
         EventId: 52,
@@ -428,7 +536,7 @@ const Events = [
         Time: 20,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 7
     },
     {
         EventId: 53,
@@ -436,7 +544,7 @@ const Events = [
         Time: 20,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 11
     },
     {
         EventId: 54,
@@ -444,7 +552,7 @@ const Events = [
         Time: 82,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 1
     },
     // Game 8 VS Ferrum
     {
@@ -453,7 +561,7 @@ const Events = [
         Time: 14,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 9
     },
     {
         EventId: 56,
@@ -461,7 +569,7 @@ const Events = [
         Time: 78,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 8
     },
     {
         EventId: 57,
@@ -469,7 +577,7 @@ const Events = [
         Time: 78,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 10
     },
     {
         EventId: 58,
@@ -477,7 +585,7 @@ const Events = [
         Time: 78,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 5
     },
     {
         EventId: 59,
@@ -485,7 +593,7 @@ const Events = [
         Time: 29,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: -2
     },
     {
         EventId: 60,
@@ -493,7 +601,7 @@ const Events = [
         Time: 72,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 61,
@@ -501,7 +609,7 @@ const Events = [
         Time: 88,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     // Game 9 VS Hampden Sydney
     {
@@ -510,7 +618,7 @@ const Events = [
         Time: 34,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 63,
@@ -518,7 +626,7 @@ const Events = [
         Time: 34,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 64,
@@ -526,7 +634,7 @@ const Events = [
         Time: 52,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 65,
@@ -534,7 +642,7 @@ const Events = [
         Time: 52,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 66,
@@ -542,7 +650,7 @@ const Events = [
         Time: 30,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 67,
@@ -550,7 +658,7 @@ const Events = [
         Time: 52,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 16
     },
     {
         EventId: 68,
@@ -558,7 +666,7 @@ const Events = [
         Time: 86,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     // Game 10 VS Guilford
     {
@@ -567,7 +675,7 @@ const Events = [
         Time: 71,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 10
     },
     {
         EventId: 70,
@@ -575,7 +683,7 @@ const Events = [
         Time: 71,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 17
     },
     {
         EventId: 71,
@@ -583,7 +691,7 @@ const Events = [
         Time: 42,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 72,
@@ -591,7 +699,7 @@ const Events = [
         Time: 47,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 73,
@@ -599,7 +707,7 @@ const Events = [
         Time: 67,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 74,
@@ -607,7 +715,7 @@ const Events = [
         Time: 71,
         Type: 'Red',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     // Game 11 VS Virginia Wesleyan
     {
@@ -616,7 +724,7 @@ const Events = [
         Time: 20,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 1
     },
     {
         EventId: 76,
@@ -624,7 +732,7 @@ const Events = [
         Time: 22,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 1
     },
     {
         EventId: 77,
@@ -632,7 +740,7 @@ const Events = [
         Time: 22,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 16
     },
     {
         EventId: 78,
@@ -640,7 +748,7 @@ const Events = [
         Time: 26,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 79,
@@ -648,7 +756,7 @@ const Events = [
         Time: 26,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 80,
@@ -656,7 +764,7 @@ const Events = [
         Time: 55,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 14
     },
     {
         EventId: 81,
@@ -664,7 +772,7 @@ const Events = [
         Time: 65,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 82,
@@ -672,7 +780,7 @@ const Events = [
         Time: 65,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 83,
@@ -680,7 +788,7 @@ const Events = [
         Time: 13,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 2
     },
     {
         EventId: 84,
@@ -688,7 +796,7 @@ const Events = [
         Time: 23,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 85,
@@ -696,7 +804,7 @@ const Events = [
         Time: 28,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 86,
@@ -704,7 +812,7 @@ const Events = [
         Time: 70,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 16
     },
     {
         EventId: 87,
@@ -712,7 +820,7 @@ const Events = [
         Time: 75,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 15
     },
     {
         EventId: 88,
@@ -720,7 +828,7 @@ const Events = [
         Time: 82,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     // Game 12 VS Averett
     {
@@ -729,7 +837,7 @@ const Events = [
         Time: 22,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 90,
@@ -737,7 +845,7 @@ const Events = [
         Time: 63,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 91,
@@ -745,7 +853,7 @@ const Events = [
         Time: 70,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     // Game 13 VS Penn State Abington
     {
@@ -754,7 +862,7 @@ const Events = [
         Time: 77,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 93,
@@ -762,7 +870,7 @@ const Events = [
         Time: 77,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 94,
@@ -770,7 +878,7 @@ const Events = [
         Time: 87,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     // Game 14 VS Washington & Lee
     {
@@ -779,7 +887,7 @@ const Events = [
         Time: 29,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 6
     },
     {
         EventId: 96,
@@ -787,7 +895,7 @@ const Events = [
         Time: 29,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 8
     },
     {
         EventId: 97,
@@ -795,7 +903,7 @@ const Events = [
         Time: 62,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 11
     },
     {
         EventId: 98,
@@ -803,7 +911,7 @@ const Events = [
         Time: 65,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 99,
@@ -811,7 +919,7 @@ const Events = [
         Time: 65,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 100,
@@ -819,7 +927,7 @@ const Events = [
         Time: 65,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 101,
@@ -827,7 +935,7 @@ const Events = [
         Time: 88,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 102,
@@ -835,7 +943,7 @@ const Events = [
         Time: 24,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 12
     },
     {
         EventId: 103,
@@ -843,7 +951,7 @@ const Events = [
         Time: 28,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 9
     },
     {
         EventId: 104,
@@ -851,7 +959,7 @@ const Events = [
         Time: 44,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 2
     },
     {
         EventId: 105,
@@ -859,7 +967,7 @@ const Events = [
         Time: 56,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 106,
@@ -867,7 +975,7 @@ const Events = [
         Time: 76,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     // Game 15 VS Shenandoah
     {
@@ -876,7 +984,7 @@ const Events = [
         Time: 11,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 9
     },
     {
         EventId: 108,
@@ -884,7 +992,7 @@ const Events = [
         Time: 16,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 1
     },
     {
         EventId: 109,
@@ -892,7 +1000,7 @@ const Events = [
         Time: 16,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 3
     },
     {
         EventId: 110,
@@ -900,7 +1008,7 @@ const Events = [
         Time: 61,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 111,
@@ -908,7 +1016,7 @@ const Events = [
         Time: 61,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 112,
@@ -916,7 +1024,7 @@ const Events = [
         Time: 88,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 113,
@@ -924,7 +1032,7 @@ const Events = [
         Time: 22,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 114,
@@ -932,7 +1040,7 @@ const Events = [
         Time: 67,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 9
     },
     {
         EventId: 115,
@@ -940,7 +1048,7 @@ const Events = [
         Time: 89,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 18
     },
     // Game 16 VS Bridgewater
     {
@@ -949,7 +1057,7 @@ const Events = [
         Time: 20,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 1
     },
     {
         EventId: 117,
@@ -957,7 +1065,7 @@ const Events = [
         Time: 20,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 19
     },
     {
         EventId: 118,
@@ -965,7 +1073,7 @@ const Events = [
         Time: 21,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 1
     },
     {
         EventId: 119,
@@ -973,7 +1081,7 @@ const Events = [
         Time: 73,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 20
     },
     {
         EventId: 120,
@@ -981,7 +1089,7 @@ const Events = [
         Time: 73,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 17
     },
     {
         EventId: 121,
@@ -989,7 +1097,7 @@ const Events = [
         Time: 85,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 21
     },
     {
         EventId: 122,
@@ -997,7 +1105,7 @@ const Events = [
         Time: 85,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 17
     },
     {
         EventId: 123,
@@ -1005,7 +1113,7 @@ const Events = [
         Time: 46,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 20
     },
     {
         EventId: 124,
@@ -1013,7 +1121,7 @@ const Events = [
         Time: 70,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 10
     },
     {
         EventId: 125,
@@ -1021,7 +1129,7 @@ const Events = [
         Time: 84,
         Type: 'Red',
         Team: 1,
-        PlayerId: 
+        PlayerId: 15
     },
     // Game 17 VS Hampden Sydney
     {
@@ -1030,7 +1138,7 @@ const Events = [
         Time: 4,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 127,
@@ -1038,7 +1146,7 @@ const Events = [
         Time: 4,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 128,
@@ -1046,7 +1154,7 @@ const Events = [
         Time: 56,
         Type: 'Goal',
         Team: 1,
-        PlayerId: 
+        PlayerId: 14
     },
     {
         EventId: 129,
@@ -1054,7 +1162,7 @@ const Events = [
         Time: 56,
         Type: 'Assist',
         Team: 1,
-        PlayerId: 
+        PlayerId: 9
     },
     {
         EventId: 130,
@@ -1062,7 +1170,7 @@ const Events = [
         Time: 89,
         Type: 'Goal',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 131,
@@ -1070,7 +1178,7 @@ const Events = [
         Time: 89    ,
         Type: 'Assist',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 132,
@@ -1078,7 +1186,7 @@ const Events = [
         Time: 55,
         Type: 'Yellow',
         Team: 1,
-        PlayerId: 
+        PlayerId: 9
     },
     {
         EventId: 133,
@@ -1086,7 +1194,7 @@ const Events = [
         Time: 67,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     },
     {
         EventId: 134,
@@ -1094,8 +1202,8 @@ const Events = [
         Time: 75,
         Type: 'Yellow',
         Team: 0,
-        PlayerId: 
+        PlayerId: -1
     }
 ]
 
-export {Events}
+export {Events, Players}
