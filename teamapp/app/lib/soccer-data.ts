@@ -1,3 +1,20 @@
+const Seasons = [
+    {
+        SeasonId: 1,
+        Year: 2024,
+        Wins: 8,
+        Losses: 3,
+        Ties: 6
+    },
+    {
+        SeasonId: 2,
+        Year: 2023,
+        Wins: 7,
+        Losses: 10,
+        Ties: 1
+    }
+]
+
 const Players = [
     {
         PlayerId: 1,
@@ -103,6 +120,181 @@ const Players = [
         PlayerId: 21,
         Name: 'Ludvig Werner',
         Position: 'Defense'
+    }
+]
+
+const Games = [
+    {
+        GameId: 1,
+        SeasonId: 1,
+        Date: '2024-08-30',
+        Opponent: 'Catholic University',
+        Location: 'Home',
+        Result: 'W',
+        NokeGoals: 3,
+        OpponentGoals: 2
+
+
+    },
+    {
+        GameId: 2,
+        SeasonId: 1,
+        Date: '2024-09-06',
+        Opponent: 'Oglethorpe University',
+        Location: 'Away',
+        Result: 'T',
+        NokeGoals: 0,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 3,
+        SeasonId: 1,
+        Date: '2024-09-08',
+        Opponent: 'Emory University',
+        Location: 'Away',
+        Result: 'W',
+        NokeGoals: 1,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 4,
+        SeasonId: 1,
+        Date: '2024-09-14',
+        Opponent: 'Marietta College',
+        Location: 'Home',
+        Result: 'T',
+        NokeGoals: 0,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 5,
+        SeasonId: 1,
+        Date: '2024-09-20',
+        Opponent: 'Centre College',
+        Location: 'Home',
+        Result: 'W',
+        NokeGoals: 4,
+        OpponentGoals: 1
+    },
+    {
+        GameId: 6,
+        SeasonId: 1,
+        Date: '2024-09-25',
+        Opponent: 'University of Lynchburg',
+        Location: 'Away',
+        Result: 'L',
+        NokeGoals: 1,
+        OpponentGoals: 2
+    },
+    {
+        GameId: 7,
+        SeasonId: 1,
+        Date: '2024-09-28',
+        Opponent: 'Randolph-Macon College',
+        Location: 'Home',
+        Result: 'W',
+        NokeGoals: 3,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 8,
+        SeasonId: 1,
+        Date: '2024-10-02',
+        Opponent: 'Ferrum College',
+        Location: 'Home',
+        Result: 'W',
+        NokeGoals: 2,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 9,
+        SeasonId: 1,
+        Date: '2024-10-05',
+        Opponent: 'Hampden-Sydney College',
+        Location: 'Away',
+        Result: 'L',
+        NokeGoals: 0,
+        OpponentGoals: 2
+    },
+    {
+        GameId: 10,
+        SeasonId: 1,
+        Date: '2024-10-09',
+        Opponent: 'Guilford College',
+        Location: 'Away',
+        Result: 'W',
+        NokeGoals: 1,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 11,
+        SeasonId: 1,
+        Date: '2024-10-12',
+        Opponent: 'Virginia Wesleyan University',
+        Location: 'Home',
+        Result: 'W',
+        NokeGoals: 3,
+        OpponentGoals: 2
+    },
+    {
+        GameId: 12,
+        SeasonId: 1,
+        Date: '2024-10-16',
+        Opponent: 'Averett University',
+        Location: 'Home',
+        Result: 'T',
+        NokeGoals: 0,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 13,
+        SeasonId: 1,
+        Date: '2024-10-19',
+        Opponent: 'Penn State Abington',
+        Location: 'Away',
+        Result: 'T',
+        NokeGoals: 0,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 14,
+        SeasonId: 1,
+        Date: '2024-10-23',
+        Opponent: 'Washington and Lee University',
+        Location: 'Away',
+        Result: 'T',
+        NokeGoals: 2,
+        OpponentGoals: 2
+    },
+    {
+        GameId: 15,
+        SeasonId: 1,
+        Date: '2024-10-26',
+        Opponent: 'Shenandoah University',
+        Location: 'Away',
+        Result: 'T',
+        NokeGoals: 2,
+        OpponentGoals: 2
+    },
+    {
+        GameId: 16,
+        SeasonId: 1,
+        Date: '2024-10-30',
+        Opponent: 'Bridgewater College',
+        Location: 'Home',
+        Result: 'W',
+        NokeGoals: 4,
+        OpponentGoals: 0
+    },
+    {
+        GameId: 17,
+        SeasonId: 1,
+        Date: '2024-11-02',
+        Opponent: 'Hampden-Sydney College',
+        Location: 'Away',
+        Result: 'L',
+        NokeGoals: 1,
+        OpponentGoals: 2
     }
 ]
 
@@ -1205,5 +1397,6 @@ const Events = [
         PlayerId: -1
     }
 ]
+
 
 export {Events, Players}
