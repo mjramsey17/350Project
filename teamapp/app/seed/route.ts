@@ -1,5 +1,5 @@
 import { db } from '@vercel/postgres'
-import { Players, Records, Positions } from '../lib/placeholder-data'
+import { Players, Events, Positions } from '../lib/placeholder-data'
 
 const player = await db.connect();
 
@@ -28,26 +28,27 @@ async function seedPlayers() {
     );
 }
 
-async function seedRecords() {
+async function seedEvents() {
     await player.sql`
-        CREATE TABLE IF NOT EXISTS Records (
-            ID SERIAL PRIMARY KEY,  -- Add an ID as the primary key
-            positionID INT NOT NULL,  -- Foreign Key to Positions
-            passPercentage DECIMAL,
-            Appearances INT,
-            Penalties INT,
-            FOREIGN KEY (positionID) REFERENCES Positions(positionID)  -- Link Records to Positions
-        );
+        CREATE TABLE IF NOT EXISTS Events (
+            eventID INT PRIMARY KEY,
+            gameID INT NOT NULL,
+            time INT NOT NULL,
+            type TEXT,
+            team INT,
+            playerId INT,
+            FOREIGN KEY (playerID) REFERENCES Players(ID)
+            );
     `;
 
-    const insertedRecords = await Promise.all(
-        Records.map((record) => player.sql`
-            INSERT INTO Records (positionID, passPercentage, Appearances, Penalties)
-            VALUES (${record.positionId}, ${record.passPercentage}, ${record.Appearances}, ${record.Penalties})
-            ON CONFLICT (ID) DO NOTHING;  -- Conflict on positionID (this could be adjusted)
+    const insertedEvents = await Promise.all(
+        Events.map((event) => player.sql`
+            INSERT INTO Events (eventName, eventDate, playerID, eventType, eventDetails)
+                VALUES (${event.EventId}, ${event.GameID}, ${event.Time}, ${event.Type}, ${event.Team},${event.PlayerId})
+                ON CONFLICT (eventID) DO NOTHING;
         `)
     );
-    return insertedRecords;
+    return insertedEvents;
 }
 
 async function seedPositions() {
@@ -72,7 +73,7 @@ export async function GET() {
     try {
         await player.sql`BEGIN`;
         await seedPositions();
-        await seedRecords(); 
+        await seedEvents(); 
         await seedPlayers(); 
           // Seed positions first
            // Seed records last
@@ -85,3 +86,5 @@ export async function GET() {
         return Response.json({ error: error.message }, { status: 500 });
     }
 }
+
+

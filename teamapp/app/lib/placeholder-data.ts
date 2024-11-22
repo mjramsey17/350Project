@@ -25,24 +25,32 @@ const Players = [
     }
 ]
 
-const Records = [
+const Events = [
     {
-        positionId:Players[0].ID,
-        passPercentage:.65,
-        Appearances: 16,
-        Penalties: 0
+        EventId: 1,
+        GameID: 1,
+        Time: 38,
+        Type: 'Goal',
+        Team: 1,
+        PlayerId: 1 
     },
+    
     {
-        positionId:Players[1].ID,
-        passPercentage:.35,
-        Appearances: 8,
-        Penalties: 0
+        EventId: 2,
+        GameID: 1,
+        Time: 38,
+        Type: 'Assist',
+        Team: 1,
+        PlayerId: 2
     },
+
     {
-        positionId:Players[2].ID,
-        passPercentage:.55,
-        Appearances: 16,
-        Penalties: 0
+        EventId: 3,
+        GameID: 1,
+        Time: 46,
+        Type: 'Goal',
+        Team: 1,
+        PlayerId: 3
     }
 ]
 const Positions = [
@@ -60,4 +68,4 @@ const Positions = [
     }
 ]
 
-export {Players, Records, Positions}
+export {Players, Events, Positions}
