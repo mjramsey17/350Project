@@ -1,6 +1,8 @@
 'use server';
 import { z } from 'zod';
- 
+import {sql} from '@vercel/postgres';
+import { revalidatePath} from 'next/cache';
+import {redirect} from 'next/navigation';
 const FormSchema = z.object({
   EventId: z.coerce.number(),
   GameId: z.coerce.numer(),
@@ -20,4 +22,12 @@ export async function createEvent(formData:FormData){
         Team: formData.get('Team'),
         PlayerId: formData.get('PlayerId')
     });
+    
+    await sql`
+        INSERT INTO Events (GameId, Time, Type,Team,PlayerId)
+        VALUES ( ${GameId}, ${Time}, ${Type},${Team},${PlayerId})
+    `;
+    revalidatePath('/app/events');
+    redirect('/app/events');
 }
+
