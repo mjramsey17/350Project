@@ -17,6 +17,16 @@ const Seasons = [
 
 const Players = [
     {
+        PlayerId:-2,
+        Name:"Coach",
+        Position:"Coach"
+    },
+    {
+        PlayerId:-1,
+        Name:'Opponent',
+        Position:'All'
+    },
+    {
         PlayerId: 1,
         Name: 'Michael Ramsey',
         Position: 'Forward'
